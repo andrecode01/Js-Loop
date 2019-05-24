@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>NULL</title>
+
+	<script>
+
+		function verificarwhile(){
+
+			var	v1 = document.getElementById("v1").value;
+			var	v2 = document.getElementById("v2").value;
+
+			if (v2 > v1) {
+
+				while(v2 >= v1){
+					document.write(v1+" ");
+					v1++;
+				}
+			} else
+				alert("O valor final não é maior que o valor inicial");
+		}
+		function verificardowhile(){
+
+			var	v1 = document.getElementById("v1").value;
+			var	v2 = document.getElementById("v2").value;
+
+			if (v2 > v1) {
+
+				do{
+					document.write(v1+" ");
+					v1++;
+				} while(v2 >= v1)
+
+			} else
+				alert("O valor final não é maior que o valor inicial");
+		}
+		function verificarfor(){
+
+			var	v1 = document.getElementById("v1").value;
+			var	v2 = document.getElementById("v2").value;
+
+			if (v2 > v1) {
+
+				for (v1; v2 >= v1; v1++) {
+					document.write(v1+" ");
+				}
+
+			} else
+				alert("O valor final não é maior que o valor inicial");
+		}
+
+	</script>
+
+</head>
+<body style="text-align: center;">
+
+	<p>	
+		Valor inicial:
+		<input id="v1" type="number">
+	</p>
+
+	<p>	
+		Valor final:
+		<input id="v2" type="number">
+	</p>
+
+	<input type="submit" onclick="verificarfor()" value="For">
+	<input type="submit" onclick="verificarwhile()" value="While">
+	<input type="submit" onclick="verificardowhile()" value="Do While">
+
+
+</body>
+</html>
